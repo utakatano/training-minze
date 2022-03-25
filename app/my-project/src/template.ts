@@ -9,5 +9,6 @@ export default `
     <div>Hello Minze!</div>
     <div slot="my-slot">Hello Minze again!</div>
   </my-template-element>
+  <my-conditional-element></my-conditional-element>
   <minze-counter></minze-counter>
 `
