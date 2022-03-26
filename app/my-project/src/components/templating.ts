@@ -21,4 +21,24 @@ class MyConditionalElement extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyTemplateElement, MyConditionalElement])
+class MyConditionalAttribute extends MinzeElement {
+  isActive = true
+
+  html = () => `
+    <div ${this.isActive ? 'class="active"' : ''}>
+      Hello Conditional Attribute
+    </div>
+  `
+}
+
+class MyListRendering extends MinzeElement {
+  myList = [1, 2, 3]
+
+  html = () => `
+    <ul>
+      ${this.myList.map((item) => `<li>${item}</li>`).join('')}
+    </ul>
+  `
+}
+
+Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering])
