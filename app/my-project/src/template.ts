@@ -10,5 +10,7 @@ export default `
     <div slot="my-slot">Hello Minze again!</div>
   </my-template-element>
   <my-conditional-element></my-conditional-element>
+  <my-conditional-attribute></my-conditional-attribute>
+  <my-list-rendering></my-list-rendering>
   <minze-counter></minze-counter>
 `
