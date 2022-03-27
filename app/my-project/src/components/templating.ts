@@ -41,4 +41,12 @@ class MyListRendering extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering])
+class MyDestructureElement extends MinzeElement {
+  someValue = 'Hello Destruction!'
+
+  html = ({ someValue } = this) => `
+    <div>${someValue}</div>
+  `
+}
+
+Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering, MyDestructureElement])
