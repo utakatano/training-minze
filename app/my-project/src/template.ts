@@ -13,5 +13,6 @@ export default `
   <my-conditional-attribute></my-conditional-attribute>
   <my-list-rendering></my-list-rendering>
   <my-destructure-element></my-destructure-element>
+  <my-loading-element></my-loading-element>
   <minze-counter></minze-counter>
 `

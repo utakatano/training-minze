@@ -49,4 +49,34 @@ class MyDestructureElement extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering, MyDestructureElement])
+class MyLoadingElement extends MinzeElement {
+  reactive = [['data', null]]
+
+  html = () => `
+    ${this.data ? `<div>${this.data}</div>` : '<div class="loading"></div>'}
+  `
+
+  css = () => `
+    .loading {
+      width: 1rem;
+      height: 1rem;
+      background: rgb(55 245 220);
+      animation: loading 1s infinite;
+    }
+
+    @keyframes loading {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  `
+
+  async onReactive() {
+    const delay = 2000
+    await new Promise((resolve) => setTimeout(resolve, delay))
+
+    this.data = 'Hello loading component!'
+    console.log(`simulated response time: ${delay}`)
+  }
+}
+
+Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering, MyDestructureElement, MyLoadingElement])
