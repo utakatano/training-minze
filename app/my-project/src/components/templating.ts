@@ -79,4 +79,32 @@ class MyLoadingElement extends MinzeElement {
   }
 }
 
+class MyPatchingElement extends MinzeElement {
+  reactive = [[
+    'active', false
+  ]]
+
+  html = () => `
+    <button>
+      Toggle state
+    </button>
+
+    <div>
+      <div>${this.active}</div>
+    </div>
+
+    <div>
+      <div>${this.active ? 'true' : 'false'}</div>
+    </div>
+
+    <div>
+      <div>${this.active ? '<div>true</div>' : '<div>false</div>'}</div>
+    </div>
+
+    <div>
+      <div>${this.active ? '<div>true</div>' : 'false'}</div>
+    </div>
+  `
+}
+
 Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering, MyDestructureElement, MyLoadingElement])
