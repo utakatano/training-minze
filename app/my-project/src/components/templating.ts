@@ -1,4 +1,4 @@
-import Minze, { MinzeElement } from 'minze'
+import Minze, { EventListeners, MinzeElement } from 'minze'
 
 class MyTemplateElement extends MinzeElement {
   html = () => `
@@ -98,13 +98,27 @@ class MyPatchingElement extends MinzeElement {
     </div>
 
     <div>
-      <div>${this.active ? '<div>true</div>' : '<div>false</div>'}</div>
+      ${this.active ? '<div>true</div>' : '<div>false</div>'}
     </div>
 
     <div>
-      <div>${this.active ? '<div>true</div>' : 'false'}</div>
+      ${this.active ? '<div>true</div>' : 'false'}
+    </div>
+
+    <div>
+      ${this.active ? '<div>true</div>' : '<span>false</span>'}
+    </div>
+
+    <div>
+      ${this.active ? '<div>true</div> <div>&nbsp;</div>' : '<div>false</div>'}
     </div>
   `
+
+  handleClick = () => {
+    this.active = !this.active
+  }
+
+  eventListeners = [['button', 'click', this.handleClick]]
 }
 
-Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering, MyDestructureElement, MyLoadingElement])
+Minze.defineAll([MyTemplateElement, MyConditionalElement, MyConditionalAttribute, MyListRendering, MyDestructureElement, MyLoadingElement, MyPatchingElement])

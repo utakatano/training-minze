@@ -14,5 +14,6 @@ export default `
   <my-list-rendering></my-list-rendering>
   <my-destructure-element></my-destructure-element>
   <my-loading-element></my-loading-element>
+  <my-patching-element></my-patching-element>
   <minze-counter></minze-counter>
 `
