@@ -16,5 +16,6 @@ export default `
   <my-loading-element></my-loading-element>
   <my-patching-element></my-patching-element>
   <my-css-element></my-css-element>
+  <my-conditional-styling-element></my-conditional-styling-element>
   <minze-counter></minze-counter>
 `
