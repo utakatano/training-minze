@@ -29,4 +29,22 @@ class MyConditionalStylingElement extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyCssElement, MyConditionalStylingElement])
+class MyStylingHostElement extends MinzeElement {
+  html = () => `Styling host`
+
+  css = () => `
+    :host {
+      background: red;
+    }
+
+    :host(:hover) {
+      background: blue;
+    }
+
+    :host(:active) {
+      background: green;
+    }
+  `
+}
+
+Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement])
