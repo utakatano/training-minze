@@ -18,5 +18,14 @@ export default `
   <my-css-element></my-css-element>
   <my-conditional-styling-element></my-conditional-styling-element>
   <my-styling-host-element></my-styling-host-element>
+
+  <div class="light">
+    <my-styling-host-context-element></my-styling-host-context-element>
+  </div>
+
+  <div class="dark">
+    <my-styling-host-context-element></my-styling-host-context-element>
+  </div>
+
   <minze-counter></minze-counter>
 `

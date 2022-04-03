@@ -47,4 +47,20 @@ class MyStylingHostElement extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement])
+class MyStylingHostContextElement extends MinzeElement {
+  html = () => `<div>Hello Minze!</div>`
+
+  css = () => `
+    :host-context(.light) {
+      background: white;
+      color: black;
+    }
+
+    :host-context(.dark) {
+      background: black;
+      color: white;
+    }
+  `
+}
+
+Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement, MyStylingHostContextElement])
