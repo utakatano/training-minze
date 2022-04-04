@@ -63,4 +63,21 @@ class MyStylingHostContextElement extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement, MyStylingHostContextElement])
+class MySlotsElement extends MinzeElement {
+  html = () => `
+    <slot name="slot-1"></slot>
+    <slot name="slot-2"></slot>
+  `
+
+  css = () => `
+    ::slotted(*) {
+      background: red;
+    }
+
+    ::slotted([slot=slot-2]) {
+      background: blue;
+    }
+  `
+}
+
+Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement, MyStylingHostContextElement, MySlotsElement])

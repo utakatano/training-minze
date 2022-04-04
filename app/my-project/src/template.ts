@@ -27,5 +27,10 @@ export default `
     <my-styling-host-context-element></my-styling-host-context-element>
   </div>
 
+  <my-slots-element>
+    <div slot="slot-1">Hello Minze!</div>
+    <div slot="slot-2">Hello Minze!</div>
+  </my-slots-element>
+
   <minze-counter></minze-counter>
 `
