@@ -80,4 +80,10 @@ class MySlotsElement extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement, MyStylingHostContextElement, MySlotsElement])
+class MyPartElement extends MinzeElement {
+  html = () => `
+    <div part="my-part">Hello Minze!</div>
+  `
+}
+
+Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement, MyStylingHostContextElement, MySlotsElement, MyPartElement])

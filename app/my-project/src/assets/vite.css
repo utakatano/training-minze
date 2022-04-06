@@ -8,3 +8,7 @@ body {
   padding: 1rem;
   margin: 0;
 }
+
+::part(my-part) {
+  background: rgb(55 245 220);
+}

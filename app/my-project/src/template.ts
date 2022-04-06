@@ -32,5 +32,7 @@ export default `
     <div slot="slot-2">Hello Minze!</div>
   </my-slots-element>
 
+  <my-part-element></my-part-element>
+
   <minze-counter></minze-counter>
 `
