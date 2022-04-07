@@ -34,5 +34,7 @@ export default `
 
   <my-part-element></my-part-element>
 
+  <my-variables-element></my-variables-element>
+
   <minze-counter></minze-counter>
 `
