@@ -86,4 +86,14 @@ class MyPartElement extends MinzeElement {
   `
 }
 
-Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement, MyStylingHostContextElement, MySlotsElement, MyPartElement])
+class MyVariablesElement extends MinzeElement {
+  html = () => `<div>variables</div>`
+
+  css = () => `
+    :host {
+      background: var(--my-color, red);
+    }
+  `
+}
+
+Minze.defineAll([MyCssElement, MyConditionalStylingElement, MyStylingHostElement, MyStylingHostContextElement, MySlotsElement, MyPartElement, MyVariablesElement])
