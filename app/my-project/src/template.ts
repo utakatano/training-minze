@@ -36,5 +36,7 @@ export default `
 
   <my-variables-element></my-variables-element>
 
+  <my-selectors-element></my-selectors-element>
+
   <minze-counter></minze-counter>
 `
