@@ -38,5 +38,7 @@ export default `
 
   <my-selectors-element></my-selectors-element>
 
+  <my-watch-element></my-watch-element>
+
   <minze-counter></minze-counter>
 `
