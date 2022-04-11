@@ -40,5 +40,9 @@ export default `
 
   <my-watch-element></my-watch-element>
 
+  <my-event-listeners-element></my-event-listeners-element>
+
+  <my-cast-element></my-cast-element>
+
   <minze-counter></minze-counter>
 `

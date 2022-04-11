@@ -1,4 +1,4 @@
-import Minze, { EventListeners, MinzeElement } from 'minze'
+import Minze, { MinzeElement } from 'minze'
 
 class MyEventListenersElement extends MinzeElement {
   html = () => `
@@ -15,3 +15,12 @@ class MyEventListenersElement extends MinzeElement {
     ['.button', 'click', this.handleClick]
   ]
 }
+
+class MyCastElement extends MinzeElement {
+  onReady() {
+    const optionalDetail = { msg: 'Hello Minze!' }
+    this.cast('minze:ready', optionalDetail)
+  }
+}
+
+Minze.defineAll([MyEventListenersElement, MyCastElement])
