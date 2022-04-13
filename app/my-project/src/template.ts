@@ -44,5 +44,7 @@ export default `
 
   <my-cast-element></my-cast-element>
 
+  <my-hooks-element></my-hooks-element>
+
   <minze-counter></minze-counter>
 `
