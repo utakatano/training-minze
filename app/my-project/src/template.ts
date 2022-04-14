@@ -46,5 +46,7 @@ export default `
 
   <my-hooks-element></my-hooks-element>
 
+  <my-options-element></my-options-element>
+
   <minze-counter></minze-counter>
 `
